@@ -12,7 +12,6 @@ import 'package:routine/screens/availableclasses.dart';
 import 'package:routine/screens/homepage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import 'homepages_creens/today.dart';
 
 class AddRoutine extends StatefulWidget {
@@ -99,8 +98,8 @@ class _AddRoutineState extends State<AddRoutine> {
     ref.putFile(file);
   }
 
-  var url =
-      Uri.parse("http://10.0.2.2:5000/user"); //http://192.168.0.107:5000/go
+  var url = Uri.parse(
+      "http://127.0.0.1:5000/user"); //"http://10.0.2.2:5000/user"); //http://192.168.0.107:5000/go
   void sendData(String? _path) async {
     Future.delayed(const Duration(milliseconds: 1000), () async {
       try {
@@ -143,7 +142,5 @@ class _AddRoutineState extends State<AddRoutine> {
     var x = _user.get();
     var y = x.runtimeType;
     print(y);
-
-    ;
   }
 }

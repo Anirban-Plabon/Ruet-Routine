@@ -6,6 +6,7 @@ from firebase_admin import credentials, storage
 from flask import Flask, request, jsonify
 
 
+
 def routine_adaptation(path):
 
 
@@ -244,7 +245,7 @@ app = Flask(__name__)
 
 
 def show():
-    print("fuck in flask")
+  
     global response
     if request.method == "POST":
        # getting input with name = fname in HTML form
@@ -258,7 +259,7 @@ def show():
        return " "
     else:
        return jsonify({'finalPath': response})
-       #return "fuck"+request_data
+    
    
     
  
